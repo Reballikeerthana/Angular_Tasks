@@ -1,0 +1,36 @@
+<div class = "auth-container">
+    <div>
+        <h2>{{isSignIn? 'Sign In' : 'Sign Up'}}</h2>
+
+        <form (ngSubmit) = "onSubmit()">
+            <ng-container *ngIf = "!isSignIn">
+                <div appearance = "fill" class = "full-width">
+                    <label>Name</label>
+                    <input formControlName = "name" required>
+                </div>
+            </ng-container>
+
+            <div appearance = "fill" class = "full-width">
+                <label>Email</label>
+                <input formControlName = "email" required>
+            </div>
+
+            <div appearance = "fill" class = "full-width">
+                <label>Password</label>
+                <input formControlName = "password" required>
+            </div>
+
+            <button color="primary" class = "full-width" style=
+            "background-color: green; 
+            color: white;">
+                {{isSignIn? 'Sign In' : 'Sign Up'}}
+            </button>
+
+        </form>
+        <button class="switch-btn" (click) = "toggleForm()" style=
+        "background-color: blue; 
+        color: white;">
+            {{isSignIn? 'Create an account' : 'Already have an account'}}
+        </button>
+    </div>
+</div>
