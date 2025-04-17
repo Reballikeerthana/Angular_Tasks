@@ -1,0 +1,22 @@
+<div class = "form-container">
+    <form [formGroup]="signUpForm">
+        <hr>
+        <p>
+            <label>Username : </label>
+            <input type = "text" name="username" placeholder="Username" required>
+        </p>
+        <p>
+            <label>Email : </label>
+            <input type = "text" name="email" type="email"  placeholder="Email" required>
+        </p>
+        <p>
+            <label>Password : </label>
+            <input type = "text" name="password" type="password" placeholder="password" required>
+        </p>
+        
+        <button name = "submit" color="primary" type="submit" style=
+        "background-color: blue; 
+        color: white;" (click)="onSignUp()">Sign Up</button>
+        
+    </form>
+</div>
