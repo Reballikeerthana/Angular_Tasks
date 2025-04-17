@@ -1,0 +1,17 @@
+<div class = "form-container">
+    <hr>
+    <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+        <p>
+            <label for = "email">Email : </label>
+            <input type="text" name="EmailInput" placeholder="Email" required/>
+        </p>
+        <p>
+            <label for = "password">Password : </label>
+            <input name="password" type="password" placeholder="Password" required>
+        </p>
+        <button color = "primary" name = "sign-in" style=
+        "background-color: blue; 
+        color: white;" type="submit">Sign In</button>
+    
+    </form>
+</div>
